@@ -5,3 +5,12 @@ html {
 body {
   font-family: 'Montserrat', sans-serif;
 }
+
+.effect {
+  cursor: pointer;
+  transition: transform 0.25s ease-out;
+}
+
+.effect:hover {
+  transform: translateY(-3px);
+}

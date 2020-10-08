@@ -5,27 +5,27 @@ import ReactAnimatedWeather from 'react-animated-weather';
 const App = ({ icon, color, size, animate }) => {
   let iconName;
   switch (icon) {
-    case 'clear sky':
+    case 'CLear':
       iconName = 'CLEAR_DAY';
       break;
-    case 'few clouds':
-    case 'broken clouds':
-      iconName = 'PARTLY_CLOUDY_DAY';
-      break;
-    case 'scattered clouds':
-    case 'thunderstorm':
+    case 'Clouds':
       iconName = 'CLOUDY';
       break;
-    case 'shower rain':
-    case 'rain':
-    case 'light rain':
+    case 'Thunderstorm':
+      iconName = 'WIND';
+      break;
+    case 'Rain':
       iconName = 'RAIN';
       break;
-    case 'snow':
+    case 'Snow':
       iconName = 'SNOW';
       break;
-    case 'mist':
+    case 'Drizzle':
+    case 'Mist':
+    case 'Fog':
+    case 'Haze':
       iconName = 'FOG';
+      break;
     default:
       iconName = 'CLEAR_DAY';
   }
@@ -41,7 +41,7 @@ const App = ({ icon, color, size, animate }) => {
 ReactAnimatedWeather.defaultProps = {
   animate: true,
   size: 100,
-  color: 'purple',
+  color: 'black',
 };
 
 ReactAnimatedWeather.propTypes = {

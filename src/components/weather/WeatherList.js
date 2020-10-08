@@ -8,7 +8,7 @@ const WeatherList = ({ days }) => {
       <div className='row'>
         {days.map((day) => {
           return (
-            <div className='col-md-2' key={day.dt}>
+            <div className='col' key={day.dt}>
               <WeatherItem day={day} />
             </div>
           );

@@ -1,5 +1,6 @@
 import React from 'react';
 import { useParams } from 'react-router-dom';
+import PropTypes from 'prop-types';
 import WeatherItem from '../components/weather/WeatherItem';
 
 const Forecast = ({ data }) => {
@@ -10,7 +11,7 @@ const Forecast = ({ data }) => {
     const days = data.filter((d) => d.dt_txt.includes(parts[0]));
     return days.map((day) => {
       return (
-        <div className='col-md-2' key={day.dt}>
+        <div className='col mb-2' key={day.dt}>
           <WeatherItem day={day} />
         </div>
       );
@@ -19,10 +20,14 @@ const Forecast = ({ data }) => {
 
   return (
     <div className='container'>
-      <h3>Forecast</h3>
+      <h3>Hourly Forecast</h3>
       <div className='row'>{renderContent()}</div>
     </div>
   );
+};
+
+Forecast.propTypes = {
+  data: PropTypes.array.isRequired,
 };
 
 export default Forecast;
