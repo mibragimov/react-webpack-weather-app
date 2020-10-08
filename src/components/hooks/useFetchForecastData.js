@@ -10,7 +10,7 @@ const useFetchForecastData = (lat, lon) => {
   function fetchData() {
     setIsLoading(true);
     axios(
-      `http://api.openweathermap.org/data/2.5/forecast?lat=${lat}&lon=${lon}&units=metric&APPID=fb4334ad0ec213d0da731ec1dacdbc11`
+      `https://api.openweathermap.org/data/2.5/forecast?lat=${lat}&lon=${lon}&units=metric&APPID=fb4334ad0ec213d0da731ec1dacdbc11`
     )
       .then((response) => {
         setData(response.data.list);
